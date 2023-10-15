@@ -54,7 +54,7 @@ def encodeGeometric():
 
 def encodeArithmetic(x):
     #addition
-    if x.isnum() == True:
+    if x.isnumeric() == True:
         for y in x:
             pass
     else:
@@ -68,35 +68,38 @@ def encodeTriangular(x):
     return z
     pass
     
-def encodeCaesar():
-    #shift (direction and number)
-    def shiftAmount():
-        x = input("Choose number for shift change: ")
-        if x != x.isnum() | x == "":
-            input("Unable to process non-numeric chatacters.")
-            shiftAmount()
-        else:
-            z = y + x
-            return z
+def caesar_cipher():
+    def shift_route():
+       direction = input("Choose a shift direction (left or right): ").lower()
+       if direction not in ("left", "right") or direction == "":
+            print("Choose a valid direction.")
+            shift_route()
+       else:
+            return direction
             
-    shiftDirection = input("Shift left or right?: ").lower()
-    if shiftDirection not in ("left", "right") | shiftDirection == "":
-        input("Please choose right or left.")
-        encodeCaesar()
-    else:
-        if shiftDirection == "right":
-            z = shiftAmount()
-            x + z + 1
-            pass
+    def shift_size():
+        adjust = input("Choose a number for shift change: ")
+        if not adjust.isnumeric() or adjust == "":
+            print("Choose from numbers only.")
+            return shift_size()
         else:
-            z = shiftAmount()
-            x - z -1
-            pass
+            return int(adjust)
     
-    pass
-
+    direction = shift_route()
+    n = shift_size()
+    #print('n',n)
+    #print('direction',direction)
+    if direction ==  "right":
+        new_letter = chr(((n % 26) + 97))
+    else:
+         new_letter = chr(((0 - n) % 26) + 97)
+    #print('new letter',new_letter)
+    return new_letter
+  
+#x = caesar_cipher()
+#print('output letter',x)
+  
+            
 def encodeHill():
     #https://www.google.com/search?q=hill%20cipher&client=firefox-b-1-m
     pass
-
-print(fibonacci(26))
