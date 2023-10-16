@@ -52,54 +52,15 @@ def encodeGeometric():
     #multiply
     pass
 
-def encodeArithmetic(x):
+def encodeArithmetic():
     #addition
-    if x.isnumeric() == True:
-        for y in x:
-            pass
-    else:
-        input("Unable to process non-numeric chatacters.")
-        pass
+    pass
 
-def encodeTriangular(x):
+def encodeTriangular():
     #x5 = 5(5+1)/2 = 15
     #xN = N * ( N + 1 ) / 2 = Y
-    z = x * (x + 1) / 2
-    return z
     pass
-    
-def caesar_cipher():
-    def shift_route():
-       direction = input("Choose a shift direction (left or right): ").lower()
-       if direction not in ("left", "right") or direction == "":
-            print("Choose a valid direction.")
-            shift_route()
-       else:
-            return direction
-            
-    def shift_size():
-        adjust = input("Choose a number for shift change: ")
-        if not adjust.isnumeric() or adjust == "":
-            print("Choose from numbers only.")
-            return shift_size()
-        else:
-            return int(adjust)
-    
-    direction = shift_route()
-    n = shift_size()
-    #print('n',n)
-    #print('direction',direction)
-    if direction ==  "right":
-        new_letter = chr(((n % 26) + 97))
-    else:
-         new_letter = chr(((0 - n) % 26) + 97)
-    #print('new letter',new_letter)
-    return new_letter
-  
-#x = caesar_cipher()
-#print('output letter',x)
-  
-            
+       
 def encodeHill():
     #https://www.google.com/search?q=hill%20cipher&client=firefox-b-1-m
     pass
