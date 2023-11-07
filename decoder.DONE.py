@@ -1,5 +1,5 @@
-
-sequence = {
+output = []
+seq = {
      "0": "a", "1a": "b", "1b": "c", "2": "d", "3": "e", "5": "f",
      "8": "g", "13": "h", "21": "i", "34": "j", "55": "k",
      "89": "l", "144": "m", "233": "n", "377": "o", "610": "p",
@@ -8,18 +8,15 @@ sequence = {
      "46368": "y", "75025": "z"
 }
 
-outputting = []
-
-def decoder(input_string):
-    for i in input_string.split(' '):
-        if i in sequence:
-            outputting.append(sequence[i])
-        elif i == "//":
-            outputting.append(' ')
+def decoder(input):
+    for i in input.split(' '):
+        if i in seq:
+            output.append(seq[i])
+        elif i == "||":
+            output.append(' ')
         else:
-            outputting.append(i)
-    
-    final = ''.join(outputting)
+            output.append(i)
+    final = ''.join(output)
     print("Decoded: " + final)
 
 toDecode = input("Enter coded message for decoding: ").lower()

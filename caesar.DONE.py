@@ -1,5 +1,4 @@
 def caesar():
-    
     def shift_route():
        direction = input("Choose a shift direction (left or right): ").lower()
        if direction not in ("left", "right") or direction == "":
@@ -9,7 +8,8 @@ def caesar():
             return direction
             
     def shift_size():
-        adjust = input("Choose a number for shift change: ")
+        print("Choose a number for shift change (preferably a number between 1 of 26. But it doesn't have to be)")
+        adjust = input("Number for change: ")
         if not adjust.isnumeric() or adjust == "":
             print("Choose from numbers only.")
             shift_size()
@@ -20,10 +20,8 @@ def caesar():
     n = shift_size()
    
     if direction ==  "right":
-        new_letter = chr(((n % 26) + 97))
+        nl = chr(((n % 26) + 97))
     else:
-         new_letter = chr(((0 - n) % 26) + 97)
-    return new_letter
-  
-x = caesar()
-print('output letter',x)
+         nl = chr(((0 - n) % 26) + 97)
+    return nl
+    #x = caesar()

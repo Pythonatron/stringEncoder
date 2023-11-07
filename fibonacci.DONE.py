@@ -7,18 +7,14 @@ def fibonacci(x): #input MUST be a alphabetic string (symbols are ok?)
      "u":"6765", "v":"10946", "w":"17711", "x":"28657",
      "y":"46368", "z":"75025"
      }
-    coded = []
-    x = x.lower()
+    enc = []
     for i in x:
         if i == " ":
-            coded.append("// ")
+            enc.append("||")
         elif not i.isalpha():
-            coded.append(i)
-            coded.append(' ')
+            enc.append(i)
         else:
             y = sequence[i]
-            coded.append(y)
-            coded.append(' ')
-    coded = ''.join(coded)
-    return coded
-    
+            enc.append(y)
+    enc = ''.join(enc)
+    return enc

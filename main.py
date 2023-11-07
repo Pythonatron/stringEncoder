@@ -1,18 +1,5 @@
 import math
 
-sym = [
-    "¿","]",">","#","+","!","-",";",
-    "_","<","&","$","=","~","(",":",
-    "[","/","?","%","×","©","¡","§",
-    "®"
-]
-alpha = [
-    "a","b","c","d","e","f","g",
-    "h","i","j","k","l","m","n",
-    "o","p","q","r","s","t","u",
-    "v","w","x","y","z"
-    ]
-
 def startup():
     original = input("Input text to encoded : ").lower()
     if original.isnumeric() == True:
@@ -21,19 +8,18 @@ def startup():
     else:
         return original
 
-def fibonacci(i):
-    i = i - 1
-    sqrtSC = math.sqrt(5)
-    x = int(((1 + sqrtSC) ** i - (1 - sqrtSC) ** i) / (2**i * sqrtSC))
-    return x
-    
 def encodingLevel():
     level = input("How encoded would you like your message to be? (levels: 1-5 (5 being highest)): ")
-    if level == " " | level.isalpha == True:
+    if level == "" | level.isalpha == True:
         input("Please type a number.")
         encodingLevel()
     else:
         return level
+
+
+
+def fibonacci():
+    pass    
         
 def encoding():
     pass
@@ -45,7 +31,7 @@ def encodeAlpha():
     pass
 
 def encodeGibberish():
-    #Huh?
+    #What was this supposed to be again?
     pass
     
 def encodeGeometric():
