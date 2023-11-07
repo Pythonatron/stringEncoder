@@ -1,4 +1,4 @@
-def geometric(x):
+def arithmetic(x):
     result = []
     alf = {
         "a": "1", "b": "2", "c": "3", "d": "4", "e": "5", "f": "6", "g": "7",
@@ -17,20 +17,19 @@ def geometric(x):
             else:
                 numeric_form += char 
         return numeric_form
-    print("Choose a multiplier, try to keep it relatively small")
-    print("..but i'm not your mother *shrug*")
-    mult = int(input("Multiplier: "))
+    print("Choose a number increase, try to keep it relatively small")
+    addval = int(input("Add: "))
     parts = str(x).split()
     for part in parts:
         if part.isnumeric():
             part = int(part)
-            result.append(part * mult)
+            result.append(part + addval)
         else:
             numeric_form = text_to_numeric(part)
             tri_parts = []
             for char in part:
                 if char.isalpha():
-                    tri_parts.append(int(alf[char]) * mult)
+                    tri_parts.append(int(alf[char]) + addval)
             tri_parts = " ".join(map(str, tri_parts))
             result.append(tri_parts)
     result = " ".join(map(str, result))

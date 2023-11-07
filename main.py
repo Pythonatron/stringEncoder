@@ -19,6 +19,7 @@ def encodingLevel():
 
 
 def fibonacci():
+    #Done
     pass    
         
 def encoding():
@@ -36,6 +37,7 @@ def encodeGibberish():
     
 def encodeGeometric():
     #multiply
+    #Done
     pass
 
 def encodeArithmetic():
@@ -45,6 +47,7 @@ def encodeArithmetic():
 def encodeTriangular():
     #x5 = 5(5+1)/2 = 15
     #xN = N * ( N + 1 ) / 2 = Y
+    #Done
     pass
        
 def encodeHill():
