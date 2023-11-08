@@ -1,5 +1,3 @@
-import math
-
 def startup():
     original = input("Input text to encoded : ").lower()
     if original.isnumeric() == True:
@@ -15,13 +13,27 @@ def encodingLevel():
         encodingLevel()
     else:
         return level
+    
+def encodeArithmetic():
+    #Done
+    pass
 
-
+def caesar():
+    #Done
+    pass
 
 def fibonacci():
     #Done
     pass    
         
+def encodeGeometric():
+    #Done
+    pass
+
+def encodeTriangular():
+    #Done
+    pass
+
 def encoding():
     pass
     
@@ -29,27 +41,13 @@ def encodeSymbols():
     pass
     
 def encodeAlpha():
+    #Why?
     pass
 
 def encodeGibberish():
     #What was this supposed to be again?
     pass
     
-def encodeGeometric():
-    #multiply
-    #Done
-    pass
-
-def encodeArithmetic():
-    #addition
-    pass
-
-def encodeTriangular():
-    #x5 = 5(5+1)/2 = 15
-    #xN = N * ( N + 1 ) / 2 = Y
-    #Done
-    pass
-       
 def encodeHill():
-    #https://www.google.com/search?q=hill%20cipher&client=firefox-b-1-m
+    #https://www.geeksforgeeks.org/hill-cipher/
     pass

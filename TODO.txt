@@ -1,0 +1,11 @@
+[MAIN]
+Mayhaps a Info/description per encoder
+Other things
+
+[CAESAR]
+Take input string for encodings
+If direction is left, go backwards in alphabet?
+Encode input string
+
+[FIBONACCI]
+Convert numbers to letters also, incase previous encoding output numbers

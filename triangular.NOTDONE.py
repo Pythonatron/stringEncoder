@@ -33,6 +33,5 @@ def triangular(x):
             tri_parts = " ".join(map(str, tri_parts))
             result.append(tri_parts)
 
-
     result = " ".join(map(str, result))
     return result
